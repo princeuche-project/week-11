@@ -44,7 +44,7 @@ original_queue.enqueue(10)
 original_queue.enqueue(20)
 original_queue.enqueue(30)
 
-reversed_queue = reverse_queue(original_queue)
+reversed_queue = (original_queue)
 
 print(reversed_queue.dequeue())  # Expected output: 30
 print(reversed_queue.dequeue())  # Expected output: 20
