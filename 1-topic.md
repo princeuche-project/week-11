@@ -82,7 +82,7 @@ Once you have implemented the Queue class, you can test it with the following co
 queue = Queue()
 
 print(queue.is_empty()) 
- # Expected output: True
+ # 
 
 queue.enqueue(10)
 
@@ -91,14 +91,14 @@ queue.enqueue(20)
 queue.enqueue(30)
 
 print(queue.size())
-  # Expected output: 3
+  
 
 print(queue.dequeue()) 
- # Expected output: 10
+ 
 print(queue.peek()) 
- # Expected output: 20
+ 
 print(queue.size()) 
- # Expected output: 2
+ 
 
 
 
