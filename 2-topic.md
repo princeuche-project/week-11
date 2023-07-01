@@ -2,29 +2,21 @@
 
 A Linked List is a data structure consisting of a sequence of nodes. Each node contains data and a reference (link) to the next node in the sequence. Or A linked list is a list in which the list items are linked to other list items in a specific way. Different forms of linked lists have different ways of linking objects.
 
-## Linked List Operations
+The linked list or one way list is a linear set of data elements which is also termed as nodes. Here, the linear order is specified using pointers.
 
-A Linked List typically supports the following operations:
+Each node is separated into two different parts:
 
-- `insert(data)`: Inserts a new node with the given data at the beginning of the linked list.
+The first part holds the information of the element or node
+The second piece contains the address of the next node (link / next-pointer field) in this structure list.
 
- def insert(self, data):
-        new_node = Node(data)
-        new_node.next = self.head
-        self.head = new_node
+![Alt text](image.png)
 
-- `delete(data)`: Deletes the node with the given data from the linked list.
+Linked lists can be measured as a form of high-level standpoint as being a series of nodes where each node has at least one single pointer to the next connected node, and in the case of the last node, a null pointer is used for representing that there will be no further nodes in the linked list. In the data structure, you will be implementing the linked lists which always maintain head and tail pointers for inserting values at either the head or tail of the list is a constant time operation. Randomly inserting of values is excluded using this concept and will follow a linear operation. As such, linked lists in data structure have some characteristics which are mentioned below:
 
+Insertion is O(1)
+Deletion is O(n)
+Searching is O(n)
+Linked lists have a few key points that usually make them very efficient for implementing. These are:
 
-
-- `search(data)`: Searches for a node with the given data in the linked list.
-
-- `is_empty()`: Checks if the linked list is empty.
-
-- `size()`: Returns the number of nodes in the linked list.
-
-
-# Linked Lists Implementation
-[Linkded List implementation](linked-list.py)
-
-Click the link above to see the linked list implementation and examples
+the list is dynamic and hence can be resized based on the requirement
+Secondly, the insertion is O(1).
