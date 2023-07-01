@@ -1,5 +1,5 @@
 # Data Structure Tutorial 
-Welcome to the data structure tutorial!
+Welcome to the data structure tutorial! In this tutorial, we will be looking at the following data structure Queue, LinkedList, and Tree. We are going to  talk about the important and the common use of the above metioned data structure.
 
 My Name: [Uchenna Godstime]
 
