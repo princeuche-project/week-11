@@ -3,7 +3,10 @@
 Welcome to the Queue tutorial! In this module, we will explore the Queue data structure and its implementation in Python. A queue is an ordered collection of elements that follows the First-In-First-Out (FIFO) principle, meaning that the element inserted first will be the first one to be removed.
 Before we dive into the details, let's cover the basics of the Queue data structure, its purpose, performance, and common use cases.
 
-## Purpose os Queue
+![Alt text](image-1.png) 
+
+
+## Purpose of Queue
 The primary purpose of a Queue data structure is to efficiently manage a collection of elements in a way that allows adding elements at one end (rear) and removing elements from the other end (front). It follows the FIFO principle, which makes it suitable for scenarios where the order of elements is crucial.
 Queues are commonly used in various applications, such as:
 
