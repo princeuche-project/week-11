@@ -121,7 +121,7 @@ def push(self, new_data):
 	# 4. Move the head to point to new Node
 	self.head = new_node
 
-# Complexity Analysis:
+Complexity Analysis:
 
 * Time Complexity: O(1), We have a pointer to the head and we can directly attach a node and change the pointer. So the Time complexity of inserting a node at the head position is O(1) as it does a constant amount of work.
 * Auxiliary Space: O(1)
@@ -279,11 +279,13 @@ def append(head_ref, new_data):
     # the new node
    pass
 
-# This function prints the contents of
-# the linked list starting from the head
+#This function prints the contents of
+
+#the linked list starting from the head
 
 
 def printList(node):
+
     while node is not None:
         print(node.data, end=" ")
         node = node.next
