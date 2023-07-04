@@ -24,7 +24,7 @@ the wastage of memory.
 
 * Implementation: Various advanced data structures can be implemented using a linked list like a stack, queue, graph, hash maps, etc.
 
-# types of Linked List.
+# Types of Linked List.
 
 There are mainly three types of linked:
 
@@ -36,7 +36,7 @@ Traversal of items can be done in the forward direction only due to the linking 
 ![Alt text](image-2.png)
 
 
-# Node class
+#Node class
 class Node:
   
     # Function to initialize the node object
@@ -44,7 +44,7 @@ class Node:
         self.data = data  # Assign data
         self.next = None  # Initialize next as null
   
-# Linked List class
+#Linked List class
   
   
 class LinkedList:
@@ -89,15 +89,167 @@ def printList(self):
                 break
 
 
-Linked lists can be measured as a form of high-level standpoint as being a series of nodes where each node has at least one single pointer to the next connected node, and in the case of the last node, a null pointer is used for representing that there will be no further nodes in the linked list. In the data structure, you will be implementing the linked lists which always maintain head and tail pointers for inserting values at either the head or tail of the list is a constant time operation. Randomly inserting of values is excluded using this concept and will follow a linear operation. As such, linked lists in data structure have some characteristics which are mentioned below:
+# Operations on Linked List
 
-* Insertion is O(1)
+* Insertion is O(1) Adding a new node to a linked list involves adjusting the pointers of the existing nodes to maintain the proper sequence. Insertion can be performed at the beginning, end, or any position within the list
 
-* Deletion is O(n)
+# How to insert a Linked List
 
-* Searching is O(n)
+Given a Linked List, the task is to insert a new node in this given Linked List at the following positions: 
 
-Linked lists have a few key points that usually make them very efficient for implementing. These are:
+* At the front of the linked list  
+* After a given node. 
+* At the end of the linked list.
 
-* The list is dynamic and hence can be resized based on the requirement
-* Secondly, the insertion is O(1).
+#### To insert a node at the start/beginning/front of a Linked List, we need to:
+
+Make the first node of Linked List linked to the new node
+Remove the head from the original first node of Linked List
+Make the new node as the Head of the Linked List.
+
+#This function is in LinkedList class
+#Function to insert a new node at the beginning
+def push(self, new_data):
+
+	# 1 & 2: Allocate the Node &
+	# Put in the data
+	new_node = Node(new_data)
+
+	# 3. Make next of new Node as head
+	new_node.next = self.head
+
+	# 4. Move the head to point to new Node
+	self.head = new_node
+
+# Complexity Analysis:
+
+* Time Complexity: O(1), We have a pointer to the head and we can directly attach a node and change the pointer. So the Time complexity of inserting a node at the head position is O(1) as it does a constant amount of work.
+* Auxiliary Space: O(1)
+
+
+#### To insert a node after a given node in a Linked List, we need to:
+
+Check if the given node exists or not. 
+If it do not exists, 
+
+terminate the process.
+
+If the given node exists,
+
+Make the element to be inserted as a new node
+
+Change the next pointer of given node to the new node
+
+Now shift the original next pointer of given node to the next pointer of new node
+
+
+#This function is in LinkedList class.
+#Inserts a new node after the given prev_node. This method is
+#defined inside LinkedList class shown above */
+
+def insertAfter(self, prev_node, new_data):
+
+	# 1. check if the given prev_node exists
+	if prev_node is None:
+		print("The given previous node must inLinkedList.")
+		return
+
+	# 2. Create new node &
+	# 3. Put in the data
+	new_node = Node(new_data)
+
+	# 4. Make next of new Node as next of prev_node
+	new_node.next = prev_node.next
+
+	# 5. make next of prev_node as new_node
+	prev_node.next = new_node
+
+Complexity Analysis:
+
+* Time complexity: O(1), since prev_node is already given as argument in a method, no need to iterate over list to find prev_node
+* Auxiliary Space: O(1) since using constant space to modify pointers.
+
+
+#### To insert a node at the end of a Linked List, we need to:
+
+Go to the last node of the Linked List
+Change the next pointer of last node from NULL to the new node
+Make the next pointer of new node as NULL to show the end of Linked List
+
+#This function is defined in Linked List class
+#Appends a new node at the end. This method is
+#defined inside LinkedList class shown above
+def append(self, new_data):
+
+		# 1. Create a new node
+		# 2. Put in the data
+		# 3. Set next as None
+		new_node = Node(new_data)
+
+		# 4. If the Linked List is empty, then make the
+		# new node as head
+		if self.head is None:
+			self.head = new_node
+			return
+
+		# 5. Else traverse till the last node
+		last = self.head
+		while (last.next):
+			last = last.next
+
+		# 6. Change the next of last node
+		last.next = new_node
+
+ Complexity Analysis:
+
+* Time complexity: O(N), where N is the number of nodes in the linked list. Since there is a loop from head to end, the function does O(n) work. 
+* This method can also be optimized to work in O(1) by keeping an extra pointer to the tail of the linked list/
+* Auxiliary Space: O(1)
+
+
+
+* Deletion is O(n) Removing a node from a linked list requires adjusting the pointers of the neighboring nodes to bridge the gap left by the deleted node. Deletion can be performed at the beginning, end, or any position within the list.
+
+* Searching is O(n)  Searching for a specific value in a linked list involves traversing the list from the head node until the value is found or the end of the list is reached.
+
+
+# Advantages of Linked List
+
+* Dynamic Size: Linked lists can grow or shrink dynamically, as memory allocation is done at runtime.
+Insertion and Deletion: Adding or removing elements from a linked list is efficient, especially for large lists.
+* Flexibility: Linked lists can be easily reorganized and modified without requiring a contiguous block of memory.
+
+# Disadvantages of Linked List
+
+* Random Access: Unlike arrays, linked lists do not allow direct access to elements by index. Traversal is required to reach a specific node.
+* Extra Memory: Linked lists require additional memory for storing the pointers, compared to arrays.
+
+# Create a node that will insert a new node at the end of Linked List.
+
+Use the below code to test your code.
+
+head = None
+
+#Insert nodes at the beginning of the linked list
+head = push(head, 6)
+head = push(head, 5)
+head = push(head, 4)
+head = push(head, 3)
+head = push(head, 2)
+
+print("Created Linked list is:")
+printList(head)
+
+    # Insert 1 at the end
+head = append(head, 1)
+
+print("\nAfter inserting 1 at the end:")
+printList(head)
+
+Look at the below link for the assignments solution.
+
+[Linkedlist Solution](linked-list-solution.py)
+
+
+# Conclusion:
+Linked lists are versatile data structures that provide dynamic memory allocation and efficient insertion and deletion operations. Understanding the basics of linked lists is essential for any programmer or computer science enthusiast. With this knowledge, you can implement linked lists to solve various problems and expand your understanding of data structures and algorithms."
