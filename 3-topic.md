@@ -71,8 +71,11 @@ Let us traverse the following tree with all four traversal methods:
 ![Alt text](image-6.png)
 
 Pre-order Traversal of the above tree: 1-2-4-5-3-6-7
+
 In-order Traversal of the above tree: 4-2-5-1-6-3-7
+
 Post-order Traversal of the above tree: 4-5-2-6-7-3-1
+
 Level-order Traversal of the above tree: 1-2-3-4-5-6-7
 
 ##### Implementation of Binary Tree:
@@ -89,9 +92,11 @@ class Node:
      self.val = key
 
 root = Node(1)
+
 #2and 3 becomes the children of node 1
 
 root.left = Node(2)
+
 root.right = Node(3)
 
 #4 becomes the left child of 2
