@@ -229,6 +229,69 @@ Insertion and Deletion: Adding or removing elements from a linked list is effici
 
 # Given the above explanation, create a node that will insert a new node at the end of Linked List.
 
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+#Given a reference (pointer to pointer)
+#to the head of a list and an int, inserts
+#a new node on the front of the list.
+
+
+def push(head_ref, new_data):
+    # Create a new node
+   pass
+
+    # Make the new node point to the current head
+   pass
+
+    # Update the head to point to the new node
+    pass
+
+    #Given a reference (pointer to pointer)
+    pass
+    #to the head of a list and an int,
+    
+    #appends a new node at the end
+
+
+def append(head_ref, new_data):
+    # Create a new node
+    pass
+
+    # Store the head reference in a temporary variable
+   pass
+
+    # Set the next pointer of the new node as None since it
+    # will be the last node
+    pass
+
+    # If the Linked List is empty, make the new node as the
+    # head and return
+   pass
+
+    # Else traverse till the last node
+    
+        pass
+
+    # Change the next pointer of the last node to point to
+    # the new node
+   pass
+
+# This function prints the contents of
+# the linked list starting from the head
+
+
+def printList(node):
+    while node is not None:
+        print(node.data, end=" ")
+        node = node.next
+
+
+
+
+
 Use the below code to test your code.
 
 head = None
