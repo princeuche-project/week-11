@@ -183,6 +183,7 @@ Make the next pointer of new node as NULL to show the end of Linked List
 #defined inside LinkedList class shown above
 
 def append(self, new_data):
+
 		# 1. Create a new node
 		# 2. Put in the data
 		# 3. Set next as None
