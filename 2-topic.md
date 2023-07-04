@@ -177,10 +177,12 @@ Change the next pointer of last node from NULL to the new node
 Make the next pointer of new node as NULL to show the end of Linked List
 
 #This function is defined in Linked List class
-#Appends a new node at the end. This method is
-#defined inside LinkedList class shown above
-def append(self, new_data):
 
+#Appends a new node at the end. This method is
+
+#defined inside LinkedList class shown above
+
+def append(self, new_data):
 		# 1. Create a new node
 		# 2. Put in the data
 		# 3. Set next as None
@@ -231,19 +233,27 @@ Use the below code to test your code.
 head = None
 
 #Insert nodes at the beginning of the linked list
+
 head = push(head, 6)
+
 head = push(head, 5)
+
 head = push(head, 4)
+
 head = push(head, 3)
+
 head = push(head, 2)
 
 print("Created Linked list is:")
+
 printList(head)
 
-    # Insert 1 at the end
+#Insert 1 at the end
+
 head = append(head, 1)
 
 print("\nAfter inserting 1 at the end:")
+
 printList(head)
 
 Look at the below link for the assignments solution.
