@@ -227,7 +227,7 @@ Insertion and Deletion: Adding or removing elements from a linked list is effici
 * Random Access: Unlike arrays, linked lists do not allow direct access to elements by index. Traversal is required to reach a specific node.
 * Extra Memory: Linked lists require additional memory for storing the pointers, compared to arrays.
 
-# Create a node that will insert a new node at the end of Linked List.
+# Given the above explanation, create a node that will insert a new node at the end of Linked List.
 
 Use the below code to test your code.
 
