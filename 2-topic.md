@@ -230,6 +230,7 @@ Insertion and Deletion: Adding or removing elements from a linked list is effici
 # Given the above explanation, create a node that will insert a new node at the end of Linked List.
 
 class Node:
+
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -250,7 +251,7 @@ def push(head_ref, new_data):
     pass
 
     #Given a reference (pointer to pointer)
-    pass
+
     #to the head of a list and an int,
     
     #appends a new node at the end
