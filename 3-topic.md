@@ -70,6 +70,8 @@ Let us traverse the following tree with all four traversal methods:
 
 ![Alt text](image-6.png)
 
+[Level-ordered traversal](level-order-traversal.py)
+
 Pre-order Traversal of the above tree: 1-2-4-5-3-6-7
 
 In-order Traversal of the above tree: 4-2-5-1-6-3-7
@@ -77,6 +79,8 @@ In-order Traversal of the above tree: 4-2-5-1-6-3-7
 Post-order Traversal of the above tree: 4-5-2-6-7-3-1
 
 Level-order Traversal of the above tree: 1-2-3-4-5-6-7
+
+
 
 ##### Implementation of Binary Tree:
 
